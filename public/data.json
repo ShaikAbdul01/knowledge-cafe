@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "author_name": "Mr. Raju",
+      "author_image": "https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvdHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "blog_title": "Why should you learn JavaScript and React.js",
+      "blog_cover_image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8amF2YXNjcmlwdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "reading_time": 5,
+      "publish_date": "Mar 27 (4 Days ago)",
+      "tags": ["#programming", "#javascript", "#react"]
+    },
+    {
+      "id": 2,
+      "author_name": "Md. Shimul",
+      "author_image": "https://images.unsplash.com/photo-1586716402203-79219bede43c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBvdHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "blog_title": "What are the main features of Javascript and ES6",
+      "blog_cover_image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8amF2YXNjcmlwdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "reading_time": 7,
+      "publish_date": "Mar 29 (2 Days ago)",
+      "tags": ["#programming", "#javascript", "#es6"]
+    },
+    {
+      "id": 3,
+      "author_name": "Ahsanullah",
+      "author_image": "https://images.unsplash.com/photo-1629444291470-b9ad6e7a88e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHBvdHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "blog_title": "Difference between React, Angular & Vue,",
+      "blog_cover_image": "https://athemes.com/wp-content/uploads/react-vue-angular.jpg",
+      "reading_time": 4,
+      "publish_date": "Mar 30 (1 Day ago)",
+      "tags": ["#react", "#angular", "#vue"]
+    },
+    {
+      "id": 4,
+      "author_name": "John doe",
+      "author_image": "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHBvdHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "blog_title": "How to get your first job as a self-taught programmer",
+      "blog_cover_image": "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGN2JTIwcmVzdW1lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "reading_time": 12,
+      "publish_date": "Mar 25 (6 Days ago)",
+      "tags": ["#job", "#fresher"]
+    },
+    {
+      "id": 5,
+      "author_name": "Mr. Wick",
+      "author_image": "https://images.unsplash.com/photo-1601972653460-fe3048709178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHBvdHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "blog_title": "Why do you need a portfolio as a web developer",
+      "blog_cover_image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydGZvbGlvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "reading_time": 9,
+      "publish_date": "Mar 28 (3 Days ago)",
+      "tags": ["#portfolio", "#developer"]
+    }
+  ]
