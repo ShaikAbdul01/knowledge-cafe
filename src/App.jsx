@@ -8,6 +8,11 @@ import Question from "./Components/Question/Question";
 import { Toaster } from "react-hot-toast";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const increaseCount=()=>{
+    const newCount=count+1;
+    setCount(newCount)
+  }
   const [time, setTime] = useState(0);
   const timeOnRead = (time) => {
     const previousTime = JSON.parse(localStorage.getItem("readTime"));
@@ -20,11 +25,13 @@ function App() {
       setTime(time);
     }
   };
+
+  
   return (
     <div className="App">
 
       <Header></Header>
-      <BlogCard timeOnRead={timeOnRead} time={time}></BlogCard>
+      <BlogCard timeOnRead={timeOnRead} time={time} increaseCount={increaseCount} count={count}></BlogCard>
       <Question></Question>
       <Toaster></Toaster>
     </div>

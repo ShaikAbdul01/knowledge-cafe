@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SideCard from "../SideCard/SideCard";
 import { toast } from "react-hot-toast";
 
-const BlogCard = ({timeOnRead,time}) => {
+const BlogCard = ({timeOnRead,time,count,increaseCount}) => {
   const [blogData, setBlogData] = useState([]);
 
   useEffect(() => {
@@ -16,20 +16,24 @@ const BlogCard = ({timeOnRead,time}) => {
       <div className="grid grid-cols-1 md:grid-cols-2 mx-12">
         <div className="col-span-2 p-5">
           {blogData?.map((data) => (
-            <SingleBlogCard key={data.id} blogData={data}
+            <SingleBlogCard
+             key={data.id} blogData={data}
             timeOnRead={timeOnRead}
+            increaseCount={increaseCount}
             ></SingleBlogCard>
           ))}
         </div>
       </div>
       <div className="mx-12">
-        <SideCard time={time}></SideCard>
+        <SideCard time={time}
+        count={count}
+        ></SideCard>
       </div>
     </div>
   );
 };
 
-const SingleBlogCard = ({ blogData ,timeOnRead}) => {
+const SingleBlogCard = ({ blogData ,timeOnRead,increaseCount}) => {
   const {
     blog_cover_image,
     author_image,
@@ -64,7 +68,7 @@ const SingleBlogCard = ({ blogData ,timeOnRead}) => {
         </div>
         <div className="flex justify-between">
           <p className="font-semibold mr-5">{reading_time} min read</p>
-          <button >
+          <button onClick={increaseCount}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
