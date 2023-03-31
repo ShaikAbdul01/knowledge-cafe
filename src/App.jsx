@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import BlogCard from "./Components/BlogCard/BlogCard.jsx";
 import SingleBlogCard from "./Components/SingleBlogCard/SingleBlogCard";
+import Question from "./Components/Question/Question";
 
 function App() {
  /*  const [time, setTime] = useState(0);
@@ -25,6 +26,7 @@ function App() {
       <Header></Header>
       <BlogCard></BlogCard>
       <SingleBlogCard ></SingleBlogCard>
+      <Question></Question>
     </div>
   );
 }

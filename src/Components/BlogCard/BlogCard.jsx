@@ -3,6 +3,7 @@ import SideCard from "../SideCard/SideCard";
 
 const BlogCard = () => {
   const [blogData, setBlogData] = useState([]);
+  
 
   useEffect(() => {
     fetch("./data.json")
@@ -27,6 +28,9 @@ const BlogCard = () => {
 };
 
 const SingleBlogCard = ({ blogData }) => {
+    const timeOnRead=()=>{
+        console.log("hello")
+      }
   return (
     <div className="my-5">
       <img
@@ -74,7 +78,7 @@ const SingleBlogCard = ({ blogData }) => {
           <p className="mx-2 font-semibold">{tag}</p>
         ))}
       </div>
-      <button className="text-indigo-500 font-semibold underline">
+      <button onClick={timeOnRead()} className="text-indigo-500 font-semibold underline">
         Mark As Read
       </button>
       <hr className="my-8" />
