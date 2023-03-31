@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SideCard from "../SideCard/SideCard";
+import { toast } from "react-hot-toast";
 
 const BlogCard = ({timeOnRead,time}) => {
   const [blogData, setBlogData] = useState([]);
@@ -37,6 +38,8 @@ const SingleBlogCard = ({ blogData ,timeOnRead}) => {
     publish_date,
     blog_title,
   } = blogData;
+
+ 
   
   return (
     <div className="my-5">
@@ -61,7 +64,7 @@ const SingleBlogCard = ({ blogData ,timeOnRead}) => {
         </div>
         <div className="flex justify-between">
           <p className="font-semibold mr-5">{reading_time} min read</p>
-          <button>
+          <button >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

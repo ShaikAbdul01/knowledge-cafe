@@ -2,7 +2,7 @@ import React from "react";
 
 const Question = () => {
   return (
-    <div>
+    <div className="bg-slate-100 m-12 p-5 rounded-xl shadow-xl">
       <article className="bg-slate-200 m-12 p-5 rounded-xl">
         <h1 className="font-semibold text-xl">
           What is the difference between props and state?

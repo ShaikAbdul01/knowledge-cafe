@@ -4,26 +4,13 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import BlogCard from "./Components/BlogCard/BlogCard.jsx";
-import SingleBlogCard from "./Components/SingleBlogCard/SingleBlogCard";
 import Question from "./Components/Question/Question";
+import { Toaster } from "react-hot-toast";
 
 function App() {
-  /*  const [time, setTime] = useState(0);
-  const timeOnRead = (time) => {
-    const previousTime = JSON.parse(localStorage.getItem("readTime"));
-    if (previousTime) {
-      const sum = previousTime + time;
-      localStorage.setItem("readTime", sum);
-      setTime(sum);
-    } else {
-      localStorage.setItem("readTime", time);
-      setTime(time);
-    }
-  }; */
   const [time, setTime] = useState(0);
   const timeOnRead = (time) => {
     const previousTime = JSON.parse(localStorage.getItem("readTime"));
-    console.log(previousTime);
     if (previousTime) {
       const sum = previousTime + time;
       localStorage.setItem("readTime", sum);
@@ -35,9 +22,11 @@ function App() {
   };
   return (
     <div className="App">
+
       <Header></Header>
       <BlogCard timeOnRead={timeOnRead} time={time}></BlogCard>
       <Question></Question>
+      <Toaster></Toaster>
     </div>
   );
 }
