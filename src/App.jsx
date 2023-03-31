@@ -8,7 +8,7 @@ import SingleBlogCard from "./Components/SingleBlogCard/SingleBlogCard";
 import Question from "./Components/Question/Question";
 
 function App() {
- /*  const [time, setTime] = useState(0);
+  /*  const [time, setTime] = useState(0);
   const timeOnRead = (time) => {
     const previousTime = JSON.parse(localStorage.getItem("readTime"));
     if (previousTime) {
@@ -20,12 +20,23 @@ function App() {
       setTime(time);
     }
   }; */
-
+  const [time, setTime] = useState(0);
+  const timeOnRead = (time) => {
+    const previousTime = JSON.parse(localStorage.getItem("readTime"));
+    console.log(previousTime);
+    if (previousTime) {
+      const sum = previousTime + time;
+      localStorage.setItem("readTime", sum);
+      setTime(sum);
+    } else {
+      localStorage.setItem("readTime", time);
+      setTime(time);
+    }
+  };
   return (
     <div className="App">
       <Header></Header>
-      <BlogCard></BlogCard>
-      <SingleBlogCard ></SingleBlogCard>
+      <BlogCard timeOnRead={timeOnRead} time={time}></BlogCard>
       <Question></Question>
     </div>
   );

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SideCard from "../SideCard/SideCard";
 
-const BlogCard = () => {
+const BlogCard = ({timeOnRead,time}) => {
   const [blogData, setBlogData] = useState([]);
-  
 
   useEffect(() => {
     fetch("./data.json")
@@ -16,26 +15,34 @@ const BlogCard = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 mx-12">
         <div className="col-span-2 p-5">
           {blogData?.map((data) => (
-            <SingleBlogCard key={data.id} blogData={data} />
+            <SingleBlogCard key={data.id} blogData={data}
+            timeOnRead={timeOnRead}
+            ></SingleBlogCard>
           ))}
         </div>
       </div>
       <div className="mx-12">
-        <SideCard></SideCard>
+        <SideCard time={time}></SideCard>
       </div>
     </div>
   );
 };
 
-const SingleBlogCard = ({ blogData }) => {
-    const timeOnRead=()=>{
-        console.log("hello")
-      }
+const SingleBlogCard = ({ blogData ,timeOnRead}) => {
+  const {
+    blog_cover_image,
+    author_image,
+    author_name,
+    reading_time,
+    publish_date,
+    blog_title,
+  } = blogData;
+  
   return (
     <div className="my-5">
       <img
         className="w-[845px] h-[450px] rounded-md"
-        src={blogData.blog_cover_image}
+        src={blog_cover_image}
         alt=""
       />
       <div className="flex items-center justify-between mx-5">
@@ -43,17 +50,17 @@ const SingleBlogCard = ({ blogData }) => {
           <div>
             <img
               className="w-[60px] h-[60px] rounded-full"
-              src={blogData.author_image}
+              src={author_image}
               alt=""
             />
           </div>
           <div className="ml-5">
-            <h4 className="text-xl font-semibold">{blogData.author_name}</h4>
-            <p className="text-sm">{blogData.publish_date}</p>
+            <h4 className="text-xl font-semibold">{author_name}</h4>
+            <p className="text-sm">{publish_date}</p>
           </div>
         </div>
         <div className="flex justify-between">
-          <p className="font-semibold mr-5">{blogData.reading_time} min read</p>
+          <p className="font-semibold mr-5">{reading_time} min read</p>
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,13 +79,16 @@ const SingleBlogCard = ({ blogData }) => {
           </button>
         </div>
       </div>
-      <h2 className="text-3xl font-bold">{blogData.blog_title}</h2>
+      <h2 className="text-3xl font-bold">{blog_title}</h2>
       <div className="flex my-5">
         {blogData.tags.map((tag) => (
           <p className="mx-2 font-semibold">{tag}</p>
         ))}
       </div>
-      <button onClick={timeOnRead()} className="text-indigo-500 font-semibold underline">
+      <button
+        onClick={() => timeOnRead(blogData.reading_time)}
+        className="text-indigo-500 font-semibold underline"
+      >
         Mark As Read
       </button>
       <hr className="my-8" />
