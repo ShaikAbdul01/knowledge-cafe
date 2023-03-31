@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SideCard from "../SideCard/SideCard";
 
 const BlogCard = () => {
   const [blogData, setBlogData] = useState([]);
@@ -10,13 +11,17 @@ const BlogCard = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 mx-12">
-      <div className="col-span-2 p-5">
-        {blogData?.map((data) => (
-          <SingleBlogCard key={data.id} blogData={data} />
-        ))}
+    <div className="md:flex">
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-12">
+        <div className="col-span-2 p-5">
+          {blogData?.map((data) => (
+            <SingleBlogCard key={data.id} blogData={data} />
+          ))}
+        </div>
       </div>
-      <div className=""></div>
+      <div className="mx-12">
+        <SideCard></SideCard>
+      </div>
     </div>
   );
 };
