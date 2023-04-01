@@ -2,8 +2,10 @@ import React from "react";
 
 const Question = () => {
   return (
-    <div className="bg-slate-100 m-12 p-5 rounded-xl shadow-xl">
-      <article className="bg-slate-200 m-12 p-5 rounded-xl">
+    <div className="grid md:grid-cols-2 m-12">
+      <div className="bg-slate-100  p-5 rounded-xl shadow-xl">
+       
+      <article className="bg-slate-200 md:m-12  p-5 rounded-xl mb-5">
         <h1 className="font-semibold text-xl">
           What is the difference between props and state?
         </h1>
@@ -13,7 +15,7 @@ const Question = () => {
           data that represents the internal state of a component.
         </p>
       </article>
-      <article className="bg-slate-200 m-12 p-5 rounded-xl">
+      <article className="bg-slate-200 md:m-12 p-5 rounded-xl mb-5">
         <h1 className="font-semibold text-xl">How useState works?</h1>
         <p>
           <span className="font-semibold">Ans : </span>The useState hook is used
@@ -24,7 +26,7 @@ const Question = () => {
           component.
         </p>
       </article>
-      <article className="bg-slate-200 m-12 p-5 rounded-xl">
+      <article className="bg-slate-200 md:m-12 p-5 rounded-xl mb-5">
         <h1 className="font-semibold text-xl">
           What else can useEffect() do other than load data?
         </h1>
@@ -37,7 +39,7 @@ const Question = () => {
           component.
         </p>
       </article>
-      <article className="bg-slate-200 m-12 p-5 rounded-xl">
+      <article className="bg-slate-200 md:m-12 p-5 rounded-xl mb-5">
         <h1 className="font-semibold text-xl">How does react work?</h1>
         <p>
           <span className="font-semibold">Ans : </span>React is a JavaScript
@@ -47,6 +49,7 @@ const Question = () => {
           changes.
         </p>
       </article>
+    </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import profile from "../../Image/download.png";
 const Header = () => {
   return (
     <>
-      <nav className="m-12 flex justify-between items-center  ">
+      <nav className="m-8 flex justify-between items-center  ">
         <h1 className="text-4xl font-bold">Knowledge Cafe</h1>
 
         <div className="h-[60px] w-[60px]">
