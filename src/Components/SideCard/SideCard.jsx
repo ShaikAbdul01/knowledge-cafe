@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 const SideCard = ({time,count}) => {
     const [newTime,setNewTime]=useState(time)
+    
+    
     useEffect(()=>{
         const getTime=localStorage.getItem("readTime")
         setNewTime(getTime)

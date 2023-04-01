@@ -34,6 +34,7 @@ const BlogCard = ({timeOnRead,time,count,increaseCount}) => {
 };
 
 const SingleBlogCard = ({ blogData ,timeOnRead,increaseCount}) => {
+ 
   const {
     blog_cover_image,
     author_image,
@@ -43,8 +44,8 @@ const SingleBlogCard = ({ blogData ,timeOnRead,increaseCount}) => {
     blog_title,
   } = blogData;
 
- 
   
+ 
   return (
     <div className="my-5">
       <img
